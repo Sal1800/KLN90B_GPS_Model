@@ -1,0 +1,156 @@
+<ModelBehaviors>
+
+	<Include ModelBehaviorFile="Asobo\Common.xml"/>
+
+	<Template Name="KLN90B_Template">
+
+		<Component ID="KLN90B">
+			<!-- Set electrical circuit index -->
+			<Update Once="True" InteractionModel="ALL">
+				24 (&gt;L:KLN90B_ElectricitySimVarIndex)
+			</Update>
+
+			<Component ID="KLN_90B_Btn_CSR_L" Node="KLN_90B_Btn_CSR_L">
+				<UseTemplate Name="ASOBO_GT_Push_Button">
+					<TOOLTIPID>Left Cursor</TOOLTIPID>
+					<ANIM_NAME>KLN_90B_Btn_CSR_L</ANIM_NAME>
+					<LEFT_SINGLE_CODE>(&gt;H:KLN90B_LeftCursor_Toggle)</LEFT_SINGLE_CODE>
+				</UseTemplate>
+				<UseTemplate Name="ASOBO_GT_Emissive_Gauge">
+					<FAILURE_CIRCUIT>24</FAILURE_CIRCUIT>
+					<EMISSIVE_CODE>(A:LIGHT POTENTIOMETER:11, Percent over 100)</EMISSIVE_CODE>
+				</UseTemplate>
+			</Component>
+			<Component ID="KLN_90B_Btn_CSR_R" Node="KLN_90B_Btn_CSR_R">
+				<UseTemplate Name="ASOBO_GT_Push_Button">
+					<TOOLTIPID>Right Cursor</TOOLTIPID>
+					<ANIM_NAME>KLN_90B_Btn_CSR_R</ANIM_NAME>
+					<LEFT_SINGLE_CODE>(&gt;H:KLN90B_RightCursor_Toggle)</LEFT_SINGLE_CODE>
+				</UseTemplate>
+				<UseTemplate Name="ASOBO_GT_Emissive_Gauge">
+					<FAILURE_CIRCUIT>24</FAILURE_CIRCUIT>
+					<EMISSIVE_CODE>(A:LIGHT POTENTIOMETER:11, Percent over 100)</EMISSIVE_CODE>
+				</UseTemplate>
+			</Component>			
+			<Component ID="KLN_90B_Btn_MSG" Node="KLN_90B_Btn_MSG">
+				<UseTemplate Name="ASOBO_GT_Push_Button">
+					<TOOLTIPID>Message</TOOLTIPID>
+					<ANIM_NAME>KLN_90B_Btn_MSG</ANIM_NAME>
+					<LEFT_SINGLE_CODE>(&gt;H:KLN90B_MSG_Push)</LEFT_SINGLE_CODE>
+				</UseTemplate>
+				<UseTemplate Name="ASOBO_GT_Emissive_Gauge">
+					<FAILURE_CIRCUIT>24</FAILURE_CIRCUIT>
+					<EMISSIVE_CODE>(A:LIGHT POTENTIOMETER:11, Percent over 100)</EMISSIVE_CODE>
+				</UseTemplate>
+			</Component>
+			<Component ID="KLN_90B_Btn_ALT" Node="KLN_90B_Btn_ALT">
+				<UseTemplate Name="ASOBO_GT_Push_Button">
+					<TOOLTIPID>Altitude</TOOLTIPID>
+					<ANIM_NAME>KLN_90B_Btn_ALT</ANIM_NAME>
+					<LEFT_SINGLE_CODE>(&gt;H:KLN90B_ALT_Push)</LEFT_SINGLE_CODE>
+				</UseTemplate>
+				<UseTemplate Name="ASOBO_GT_Emissive_Gauge">
+					<FAILURE_CIRCUIT>24</FAILURE_CIRCUIT>
+					<EMISSIVE_CODE>(A:LIGHT POTENTIOMETER:11, Percent over 100)</EMISSIVE_CODE>
+				</UseTemplate>
+			</Component>
+			<Component ID="KLN_90B_Btn_D" Node="KLN_90B_Btn_D">
+				<UseTemplate Name="ASOBO_GT_Push_Button">
+					<TOOLTIPID>Direct To</TOOLTIPID>
+					<ANIM_NAME>KLN_90B_Btn_D</ANIM_NAME>
+					<LEFT_SINGLE_CODE>(&gt;H:KLN90B_DCT_Push)</LEFT_SINGLE_CODE>
+				</UseTemplate>
+				<UseTemplate Name="ASOBO_GT_Emissive_Gauge">
+					<FAILURE_CIRCUIT>24</FAILURE_CIRCUIT>
+					<EMISSIVE_CODE>(A:LIGHT POTENTIOMETER:11, Percent over 100)</EMISSIVE_CODE>
+				</UseTemplate>
+			</Component>
+			<Component ID="KLN_90B_Btn_CLR" Node="KLN_90B_Btn_CLR">
+				<UseTemplate Name="ASOBO_GT_Push_Button">
+					<TOOLTIPID>Clear</TOOLTIPID>
+					<ANIM_NAME>KLN_90B_Btn_CLR</ANIM_NAME>
+					<LEFT_SINGLE_CODE>(&gt;H:KLN90B_CLR_Push)</LEFT_SINGLE_CODE>
+				</UseTemplate>
+				<UseTemplate Name="ASOBO_GT_Emissive_Gauge">
+					<FAILURE_CIRCUIT>24</FAILURE_CIRCUIT>
+					<EMISSIVE_CODE>(A:LIGHT POTENTIOMETER:11, Percent over 100)</EMISSIVE_CODE>
+				</UseTemplate>
+			</Component>			
+			<Component ID="KLN_90B_Btn_ENT" Node="KLN_90B_Btn_ENT">
+				<UseTemplate Name="ASOBO_GT_Push_Button">
+					<TOOLTIPID>Enter</TOOLTIPID>
+					<ANIM_NAME>KLN_90B_Btn_ENT</ANIM_NAME>
+					<LEFT_SINGLE_CODE>(&gt;H:KLN90B_ENT_Push)</LEFT_SINGLE_CODE>
+				</UseTemplate>
+				<UseTemplate Name="ASOBO_GT_Emissive_Gauge">
+					<FAILURE_CIRCUIT>24</FAILURE_CIRCUIT>
+					<EMISSIVE_CODE>(A:LIGHT POTENTIOMETER:11, Percent over 100)</EMISSIVE_CODE>
+				</UseTemplate>
+			</Component>	
+
+			<Component ID="KLN_90B_Knob_Scan_R" Node="KLN_90B_Knob_Scan_R">
+		    	<UseTemplate Name="ASOBO_GT_Interaction_LeftSingle_Code">
+		    		<TOOLTIPID>Scan</TOOLTIPID>
+					<LEFT_SINGLE_CODE>(&gt;H:KLN90B_RightScan_Toggle)</LEFT_SINGLE_CODE>
+					<EVENTID/>
+				</UseTemplate>
+			</Component>
+			<Component ID="KLN_90B_Knob_Outer_L" Node="KLN_90B_Knob_Outer_L">
+				<UseTemplate Name="ASOBO_GT_Knob_Infinite">
+					<TOOLTIPID>Left Outer</TOOLTIPID>
+					<ANIM_NAME>KLN_90B_Knob_Outer_L</ANIM_NAME>
+					<CLOCKWISE_CODE>(&gt;H:KLN90B_LeftLargeKnob_Right)</CLOCKWISE_CODE>
+					<ANTICLOCKWISE_CODE>(&gt;H:KLN90B_LeftLargeKnob_Left)</ANTICLOCKWISE_CODE>
+				</UseTemplate>
+			</Component>
+			<Component ID="KLN_90B_Knob_Inner_L" Node="KLN_90B_Knob_Inner_L">
+				<UseTemplate Name="ASOBO_GT_Knob_Infinite">
+					<TOOLTIPID>Left Inner</TOOLTIPID>
+					<ANIM_NAME>KLN_90B_Knob_Inner_L</ANIM_NAME>
+					<CLOCKWISE_CODE>(&gt;H:KLN90B_LeftSmallKnob_Right)</CLOCKWISE_CODE>
+					<ANTICLOCKWISE_CODE>(&gt;H:KLN90B_LeftSmallKnob_Left)</ANTICLOCKWISE_CODE>
+				</UseTemplate>
+			</Component>
+			<Component ID="KLN_90B_Knob_Outer_R" Node="KLN_90B_Knob_Outer_R">
+				<UseTemplate Name="ASOBO_GT_Knob_Infinite">
+					<TOOLTIPID>Right Outer</TOOLTIPID>
+					<ANIM_NAME>KLN_90B_Knob_Outer_R</ANIM_NAME>
+					<CLOCKWISE_CODE>(&gt;H:KLN90B_RightLargeKnob_Right)</CLOCKWISE_CODE>
+					<ANTICLOCKWISE_CODE>(&gt;H:KLN90B_RightLargeKnob_Left)</ANTICLOCKWISE_CODE>
+				</UseTemplate>
+			</Component>
+			<Component ID="KLN_90B_Knob_Inner_R" Node="KLN_90B_Knob_Inner_R">
+				<UseTemplate Name="ASOBO_GT_Knob_Infinite">
+					<TOOLTIPID>Right Inner</TOOLTIPID>
+					<ANIM_NAME>KLN_90B_Knob_Inner_R</ANIM_NAME>
+					<CLOCKWISE_CODE>(&gt;H:KLN90B_RightSmallKnob_Right)</CLOCKWISE_CODE>
+					<ANTICLOCKWISE_CODE>(&gt;H:KLN90B_RightSmallKnob_Left)</ANTICLOCKWISE_CODE>
+				</UseTemplate>
+			</Component>
+
+			<Component ID="KLN_90B_Knob_BRT" Node="KLN_90B_Knob_BRT">
+				<UseTemplate Name="ASOBO_GT_Knob_Infinite_Push">
+					<TOOLTIPID>Power/ Brightness</TOOLTIPID>
+					<ANIM_NAME_KNOB>KLN_90B_Knob_BRT</ANIM_NAME_KNOB>
+					<ANIM_NAME_PUSH>KLN_90B_Push_BRT</ANIM_NAME_PUSH>
+					<CLOCKWISE_CODE>(&gt;H:KLN90B_Brt_Inc)</CLOCKWISE_CODE>
+					<ANTICLOCKWISE_CODE>(&gt;H:KLN90B_Brt_Dec)</ANTICLOCKWISE_CODE>
+					<LEFT_SINGLE_CODE>(&gt;H:KLN90B_Power_Toggle)</LEFT_SINGLE_CODE>
+				</UseTemplate>
+			</Component>
+
+			<!-- lighting -->
+			<Component ID="KLN_90B_Root" Node="KLN_90B_Root">
+				<UseTemplate Name="ASOBO_GT_Emissive_Gauge">
+					<FAILURE_CIRCUIT>24</FAILURE_CIRCUIT>
+					<EMISSIVE_CODE>(A:LIGHT POTENTIOMETER:11, Percent over 100)</EMISSIVE_CODE>
+				</UseTemplate>
+			</Component>
+
+
+
+		</Component>
+
+	</Template>
+
+</ModelBehaviors>
